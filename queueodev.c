@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 struct node {
   int data;
@@ -70,7 +69,7 @@ void ekle(int id){
 
 void cikar(){
 	if (front == NULL) {
-        printf("Sýra boþ, iþlem yapacak kimse yok.\n");
+        printf("Sira bos, islem yapacak kimse yok.\n");
     }
     else{
     temp=front;
@@ -94,27 +93,23 @@ void yazdir(){
 }
 
 void main(){
-	setlocale(LC_ALL, "Turkish");
 	int secim,id;
 	while(1){
-	printf("Hangi iþlem olsun ?\n\n");
-	printf("1.Kuyruða Girme Ýþlemi\n");
-	printf("2.Kuyruktakini Ýþleme Alma\n");
-	printf("3.Kuyruðu Görüntüleme Ýþlemi\n");
+	printf("Hangi islem olsun ?\n\n");
+	printf("1.Kuyruga Girme Islemi\n");
+	printf("2.Kuyruktakini Isleme Alma\n");
+	printf("3.Kuyrugu Goruntuleme Islemi\n");
 	scanf("%d",&secim);
 	
 	switch(secim){
 	case 1:
-	      printf("ID Numaranýzý girin:");
+	      printf("ID Numaranizi girin:");
 	      scanf("%d",&id);
 	      ekle(id);
-	      yazdir();
 	      break;
 	
 	case 2:
-		 cikar();
-		yazdir();
-	 
+		 cikar();	 
 		 break;
 		 
 	case 3:
@@ -122,7 +117,7 @@ void main(){
 		 break;
 		 	 
 	default:
-            printf("Hatalý bir seçim yapýldý.\n");
+            printf("Hatali bir secim yapildi.\n");
 	}
 	}
 		}
